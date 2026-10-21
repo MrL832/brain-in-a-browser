@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:pages": "tsc -b && BASE_PATH=/brain-in-a-browser/ vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },

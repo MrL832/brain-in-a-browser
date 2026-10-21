@@ -22,3 +22,16 @@ npm run dev
 npm run build
 npm run preview
 ```
+
+## GitHub Pages
+
+This project is configured to deploy to GitHub Pages from GitHub Actions.
+
+```bash
+npm run build:pages
+```
+
+- Production builds read `BASE_PATH` first, then fall back to the current GitHub repository name from `GITHUB_REPOSITORY`.
+- For this repository, `npm run build:pages` emits a build that serves correctly from `/brain-in-a-browser/`.
+- The workflow file is `.github/workflows/deploy-pages.yml`.
+- In the GitHub repository settings, set Pages to use `GitHub Actions` as the source.
