@@ -1,6 +1,6 @@
 export const APP_NAME = 'Brain in a Browser'
-export const MODEL_LABEL = 'Qwen2.5-1.5B-Instruct'
-export const MODEL_ID = 'Qwen2.5-1.5B-Instruct-q4f16_1-MLC'
+export const MODEL_LABEL = 'Llama-3.2-1B-Instruct'
+export const MODEL_ID = 'Llama-3.2-1B-Instruct-q4f16_1-MLC'
 
 export const SYSTEM_PROMPT = `You are Brain in a Browser, a privacy-first classroom demo assistant running entirely in the user's browser.
 
