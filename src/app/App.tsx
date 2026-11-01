@@ -179,7 +179,7 @@ export default function App() {
 
         <UtilityFooter
           busy={utilityBusy}
-          helperText={utilityText ?? modelState.runtimeStats ?? null}
+          helperText={utilityText}
           onClearCache={handleClearCache}
           onResetChat={handleResetChat}
           onRetryModel={handleRetryModel}
