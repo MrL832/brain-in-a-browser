@@ -17,23 +17,23 @@ export function ChatMessageBubble({ message }: ChatMessageBubbleProps) {
   return (
     <article className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}>
       <div
-        className={`max-w-3xl rounded-[24px] px-4 py-3 shadow-lg ring-1 ring-inset ${
+        className={`max-w-3xl rounded-[24px] px-4 py-3 shadow-sm ring-1 ring-inset ${
           isUser
-            ? 'bg-cyan-400 text-slate-950 ring-cyan-200/60'
-            : 'bg-white/6 text-slate-100 ring-white/10'
+            ? 'bg-slate-900 text-white ring-slate-900/10'
+            : 'bg-slate-50 text-slate-800 ring-slate-200'
         }`}
       >
         <div className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.18em]">
-          <span className={isUser ? 'text-slate-900/70' : 'text-slate-400'}>
+          <span className={isUser ? 'text-white/70' : 'text-slate-400'}>
             {isUser ? 'You' : 'Local model'}
           </span>
           {message.partial && (
-            <span className="rounded-full bg-amber-400/15 px-2 py-1 text-[10px] font-semibold text-amber-200 ring-1 ring-inset ring-amber-300/20">
+            <span className="rounded-full bg-amber-50 px-2 py-1 text-[10px] font-semibold text-amber-700 ring-1 ring-inset ring-amber-200">
               Partial
             </span>
           )}
           {message.streaming && (
-            <span className="rounded-full bg-sky-400/15 px-2 py-1 text-[10px] font-semibold text-sky-100 ring-1 ring-inset ring-sky-300/20">
+            <span className="rounded-full bg-sky-50 px-2 py-1 text-[10px] font-semibold text-sky-700 ring-1 ring-inset ring-sky-200">
               Streaming
             </span>
           )}
@@ -43,7 +43,7 @@ export function ChatMessageBubble({ message }: ChatMessageBubbleProps) {
           {message.content || '...'}
         </p>
 
-        <p className={`mt-3 text-right text-xs ${isUser ? 'text-slate-900/70' : 'text-slate-400'}`}>
+        <p className={`mt-3 text-right text-xs ${isUser ? 'text-white/65' : 'text-slate-400'}`}>
           {formatTimestamp(message.createdAt)}
         </p>
       </div>
